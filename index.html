@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Cipher</h1>
+    <form id="cipherForm">
+        <textarea id="inputText" placeholder="Masukkan plainteks di sini..."></textarea>
+        <input type="file" id="fileInput" accept=".txt" onchange="handleFileUpload()">
+        <input type="text" id="key" placeholder="Masukkan kunci (min 12 karakter)">
+        <select id="cipherType">
+            <option value="vigenere">Vigenere Cipher</option>
+            <option value="playfair">Playfair Cipher</option>
+            <option value="hill">Hill Cipher</option>
+        </select>
+        <button type="button" onclick="encrypt()">Enkripsi</button>
+        <button type="button" onclick="decrypt()">Dekripsi</button>
+    </form>
+    <h2>Hasil:</h2>
+    <textarea id="outputText" readonly></textarea>
+    <script src="script.js"></script>
+</body>
+</html>
